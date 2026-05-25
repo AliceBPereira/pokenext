@@ -1,0 +1,9 @@
+instalando jest 
+- npm install --save-dev jest
+
+Executar 
+- jest my-test --notify --config=config.json
+
+configuração 
+- npm init jest@latest
+

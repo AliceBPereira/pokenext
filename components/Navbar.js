@@ -1,8 +1,6 @@
-import Link from 'next/link'
-
-import styles from '../styles/Navbar.module.css'
-
-import Image from 'next/image'
+import Link from "next/link";
+import styles from "../styles/Navbar.module.css";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -18,16 +16,16 @@ export default function Navbar() {
       </div>
       <ul className={styles.link_items}>
         <li>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </li>
-        <li>
           <Link href="/about">
             <a>Sobre</a>
           </Link>
         </li>
+        <li>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </li>
       </ul>
     </nav>
-  )
+  );
 }

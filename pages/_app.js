@@ -1,13 +1,9 @@
 import "../styles/globals.css";
 
-import Layout from "../components/Layout";
+import AppContainer from "../containers/App";
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
+function MyApp(props) {
+  return <AppContainer {...props} />;
 }
 
 export default MyApp;
