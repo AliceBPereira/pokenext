@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/Home deve renderizar o titulo e os cards dos pokemons 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Poke
+      <span>
+        Next
+      </span>
+    </h1>
+    <img
+      alt="PokeNext"
+      height="50"
+      src="/images/pokeball.png"
+      width="50"
+    />
+  </div>
+  <div>
+    <div>
+      bulbasaur
+    </div>
+    <div>
+      charmander
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import AboutContainer from "../About";
+import About from "../About";
 
 jest.mock("next/image", () => ({
   __esModule: true,
@@ -11,20 +11,12 @@ jest.mock("next/image", () => ({
 }));
 
 describe("containers/About", () => {
-  it("deve renderizar o conteudo da pagina sobre", () => {
-    render(<AboutContainer />);
+  it("deve renderizar o conteudo estatico da pagina", () => {
+    const { asFragment } = render(<About />);
 
     expect(
       screen.getByRole("heading", { name: "Sobre o projeto" }),
     ).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        "PokeNext é um App construído em Next.js para consultar Pokémons.",
-      ),
-    ).toBeInTheDocument();
-    expect(screen.getByAltText("Charizard")).toHaveAttribute(
-      "src",
-      "/images/charizard.png",
-    );
+    expect(asFragment()).toMatchSnapshot();
   });
 });

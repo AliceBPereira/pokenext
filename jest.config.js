@@ -17,7 +17,11 @@ module.exports = {
     "\\.module\\.(css|scss|sass)$": "<rootDir>/__mocks__/cssModuleMock.js",
     "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styleMock.js",
   },
-  testPathIgnorePatterns: ["/node_modules/", "/.next/"],
+  testPathIgnorePatterns: [
+    "/node_modules/",
+    "/.next/",
+    
+  ],
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": [
       "babel-jest",

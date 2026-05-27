@@ -1,7 +1,24 @@
-import HomeContainer, { getStaticProps } from "../containers/Home";
+import HomeContainer from "../containers/Home";
 
-export { getStaticProps };
+export async function getStaticProps() {
+  const maxPokemons = 50;
+  const api = `https://pokeapi.co/api/v2/pokemon/`;
 
-export default function Home(props) {
-  return <HomeContainer {...props} />;
+  const res = await fetch(`${api}?limit=${maxPokemons}`);
+
+  const data = await res.json();
+
+  data.results.forEach((item, index) => {
+    item.id = index + 1;
+  });
+
+  return {
+    props: {
+      pokemons: data.results,
+    },
+  };
+}
+
+export default function Home({ pokemons }) {
+  return <HomeContainer pokemons={pokemons} />;
 }

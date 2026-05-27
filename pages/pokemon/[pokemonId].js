@@ -1,10 +1,37 @@
-import PokemonContainer, {
-  getStaticPaths,
-  getStaticProps,
-} from "../../containers/Pokemon";
+import PokemonContainer from "../../containers/Pokemon";
 
-export { getStaticPaths, getStaticProps };
+export const getStaticPaths = async () => {
+  const maxPokemons = 251;
+  const api = `https://pokeapi.co/api/v2/pokemon/`;
 
-export default function Pokemon(props) {
-  return <PokemonContainer {...props} />;
+  const res = await fetch(`${api}?limit=${maxPokemons}`);
+
+  const data = await res.json();
+
+  const paths = data.results.map((pokemon, index) => {
+    return {
+      params: { pokemonId: (index + 1).toString() },
+    };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async (context) => {
+  const id = context.params.pokemonId;
+
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+
+  const data = await res.json();
+
+  return {
+    props: { pokemon: data },
+  };
+};
+
+export default function Pokemon({ pokemon }) {
+  return <PokemonContainer pokemon={pokemon} />;
 }

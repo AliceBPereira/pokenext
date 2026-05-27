@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/Pokemon deve renderizar os dados do pokemon 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      pikachu
+    </h1>
+    <img
+      alt="pikachu"
+      height="200"
+      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+      width="200"
+    />
+    <div>
+      <h3>
+        Número:
+      </h3>
+      <p>
+        #25
+      </p>
+    </div>
+    <div>
+      <h3>
+        Tipo:
+      </h3>
+      <div>
+        <span
+          class="undefined undefined"
+        >
+          electric
+        </span>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4>
+          Altura:
+        </h4>
+        <p>
+          40 cm
+        </p>
+      </div>
+      <div>
+        <h4>
+          Peso:
+        </h4>
+        <p>
+          6 kg
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

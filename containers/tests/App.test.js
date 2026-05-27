@@ -1,26 +1,22 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import AppContainer from "../App";
+import App from "../App";
 
 jest.mock("../../components/Layout", () => ({
   __esModule: true,
-  default: ({ children }) => {
-    return <div>{children}</div>;
-  },
+  default: ({ children }) => <main>{children}</main>,
 }));
 
 describe("containers/App", () => {
   it("deve renderizar a pagina dentro do Layout", () => {
-    const MockComponent = ({ title }) => <p>Pokemon: {title}</p>;
+    function MockPage() {
+      return <p>Conteudo</p>;
+    }
 
-    render(
-      <AppContainer
-        Component={MockComponent}
-        pageProps={{ title: "pikachu" }}
-      />,
-    );
+    const { asFragment } = render(<App Component={MockPage} pageProps={{}} />);
 
-    expect(screen.getByText("Pokemon: pikachu")).toBeInTheDocument();
+    expect(screen.getByText("Conteudo")).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
