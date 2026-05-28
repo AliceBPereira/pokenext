@@ -12,13 +12,13 @@ const {
 } = require("../pages/pokemon/[pokemonId]");
 
 describe("pages/pokemon", () => {
-  it("renderiza a pagina", () => {
+  it("deve renderizar a pagina", () => {
     render(<PokemonPage pokemon={{ id: 25, name: "pikachu" }} />);
 
     screen.getByText("Pokemon container pikachu");
   });
 
-  it("gera os paths estaticos", async () => {
+  it("deve gerar os paths estaticos", async () => {
     global.fetch = () =>
       Promise.resolve({
         json: async () => ({
@@ -34,7 +34,7 @@ describe("pages/pokemon", () => {
     });
   });
 
-  it("busca os dados do pokemon", async () => {
+  it("deve buscar os dados do pokemon", async () => {
     const pokemon = { id: 1, name: "bulbasaur" };
 
     global.fetch = () =>
@@ -51,3 +51,4 @@ describe("pages/pokemon", () => {
     });
   });
 });
+ 

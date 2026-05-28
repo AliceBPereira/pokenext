@@ -8,13 +8,13 @@ jest.mock("../containers/Home", () => ({
 const { default: HomePage, getStaticProps } = require("../pages/index");
 
 describe("pages/index", () => {
-  it("renderiza a pagina", () => {
+  it("deve renderizar a pagina", () => {
     render(<HomePage pokemons={[{ id: 1, name: "bulbasaur" }]} />);
 
     screen.getByText("Home container 1");
   });
 
-  it("retorna os pokemons no getStaticProps", async () => {
+  it("deve retornar os pokemons no getStaticProps", async () => {
     global.fetch = () =>
       Promise.resolve({
         json: async () => ({

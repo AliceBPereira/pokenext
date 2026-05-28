@@ -18,7 +18,7 @@ describe("pages/about", () => {
     mockAboutContainer.mockClear();
   });
 
-  it("apenas delega a renderizacao para o container", () => {
+  it("deve apenas delegar a renderizacao para o container", () => {
     render(<AboutPage />);
 
     expect(mockAboutContainer).toHaveBeenCalledTimes(1);

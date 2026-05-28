@@ -18,7 +18,7 @@ describe("pages/_app", () => {
     mockAppContainer.mockClear();
   });
 
-  it("apenas encaminha a pagina e as props para o container", () => {
+  it("deve apenas encaminhar a pagina e as props para o container", () => {
     function MockPage() {
       return <p>Conteudo</p>;
     }
