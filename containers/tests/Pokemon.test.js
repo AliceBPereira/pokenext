@@ -5,7 +5,7 @@ import Pokemon from "../Pokemon";
 
 describe("containers/Pokemon", () => {
   it("deve renderizar os dados do pokemon", () => {
-    const { asFragment } = render(
+    const { container } = render(
       <Pokemon
         pokemon={{
           id: 25,
@@ -21,6 +21,6 @@ describe("containers/Pokemon", () => {
       screen.getByRole("heading", { name: "pikachu" }),
     ).toBeInTheDocument();
     expect(screen.getByText("#25")).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

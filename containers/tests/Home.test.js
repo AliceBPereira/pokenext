@@ -17,7 +17,7 @@ jest.mock("next/image", () => ({
 
 describe("containers/Home", () => {
   it("deve renderizar o titulo e os cards dos pokemons", () => {
-    const { asFragment } = render(
+    const { container } = render(
       <Home
         pokemons={[
           { id: 1, name: "bulbasaur" },
@@ -35,6 +35,6 @@ describe("containers/Home", () => {
     );
     expect(screen.getByText("bulbasaur")).toBeInTheDocument();
     expect(screen.getByText("charmander")).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

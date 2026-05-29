@@ -14,9 +14,9 @@ describe("containers/App", () => {
       return <p>Conteudo</p>;
     }
 
-    const { asFragment } = render(<App Component={MockPage} pageProps={{}} />);
+    const { container } = render(<App Component={MockPage} pageProps={{}} />);
 
     expect(screen.getByText("Conteudo")).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });
