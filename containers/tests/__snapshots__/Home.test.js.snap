@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`containers/Home deve renderizar o titulo e os cards dos pokemons 1`] = `
-<DocumentFragment>
+<div>
   <div>
     <h1>
       Poke
@@ -24,5 +24,5 @@ exports[`containers/Home deve renderizar o titulo e os cards dos pokemons 1`] = 
       charmander
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;

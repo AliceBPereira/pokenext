@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`containers/About deve renderizar o conteudo estatico da pagina 1`] = `
-<DocumentFragment>
+<div>
   <div>
     <h1>
       Sobre o projeto
@@ -16,5 +16,5 @@ exports[`containers/About deve renderizar o conteudo estatico da pagina 1`] = `
       width="300"
     />
   </div>
-</DocumentFragment>
+</div>
 `;

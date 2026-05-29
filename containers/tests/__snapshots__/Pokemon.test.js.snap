@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`containers/Pokemon deve renderizar os dados do pokemon 1`] = `
-<DocumentFragment>
+<div>
   <div>
     <h1>
       pikachu
@@ -17,7 +17,8 @@ exports[`containers/Pokemon deve renderizar os dados do pokemon 1`] = `
         Número:
       </h3>
       <p>
-        #25
+        #
+        25
       </p>
     </div>
     <div>
@@ -38,7 +39,8 @@ exports[`containers/Pokemon deve renderizar os dados do pokemon 1`] = `
           Altura:
         </h4>
         <p>
-          40 cm
+          40
+           cm
         </p>
       </div>
       <div>
@@ -46,10 +48,11 @@ exports[`containers/Pokemon deve renderizar os dados do pokemon 1`] = `
           Peso:
         </h4>
         <p>
-          6 kg
+          6
+           kg
         </p>
       </div>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;
