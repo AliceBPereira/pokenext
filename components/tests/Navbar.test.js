@@ -12,9 +12,6 @@ describe("Navbar", () => {
   it("deve renderizar os links Home e Sobre", () => {
     const { container } = render(<Navbar />);
     expect(container).toMatchSnapshot();    
-
-    //expect(screen.getByRole("link", { name: "Home" })).toBeInTheDocument();
-    //expect(screen.getByRole("link", { name: "Sobre" })).toBeInTheDocument();
   });
 
   it("deve ter href correto nos links", () => {
