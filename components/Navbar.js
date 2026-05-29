@@ -16,13 +16,13 @@ export default function Navbar() {
       </div>
       <ul className={styles.link_items}>
         <li>
-          <Link href="/about">
-            <a>Sobre</a>
+          <Link href="/">
+            <a>Home</a>
           </Link>
         </li>
         <li>
-          <Link href="/">
-            <a>Home</a>
+          <Link href="/about">
+            <a>Sobre</a>
           </Link>
         </li>
       </ul>
