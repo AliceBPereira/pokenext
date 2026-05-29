@@ -3,13 +3,6 @@ import "@testing-library/jest-dom";
 
 import Pokemon from "../Pokemon";
 
-jest.mock("next/image", () => ({
-  __esModule: true,
-  default: (props) => {
-    return <img {...props} />;
-  },
-}));
-
 describe("containers/Pokemon", () => {
   it("deve renderizar os dados do pokemon", () => {
     const { asFragment } = render(

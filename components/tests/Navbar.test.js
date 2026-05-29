@@ -2,16 +2,17 @@ import Navbar from "../Navbar";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-
 describe("Navbar", () => {
   it("deve renderizar o titulo", () => {
     render(<Navbar />);
-    expect(screen.getByRole("heading", { name: "PokeNext" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "PokeNext" }),
+    ).toBeInTheDocument();
   });
 
   it("deve renderizar os links Home e Sobre", () => {
     const { container } = render(<Navbar />);
-    expect(container).toMatchSnapshot();    
+    expect(container).toMatchSnapshot();
   });
 
   it("deve ter href correto nos links", () => {
@@ -26,5 +27,4 @@ describe("Navbar", () => {
     render(<Navbar />);
     expect(screen.getByAltText("PokeNext")).toBeInTheDocument();
   });
-
 });

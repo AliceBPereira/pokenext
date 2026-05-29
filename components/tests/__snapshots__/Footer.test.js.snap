@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer deve renderizar corretamente 1`] = `
-<DocumentFragment>
+<div>
   <footer>
     <p>
       <span>
@@ -9,5 +9,5 @@ exports[`Footer deve renderizar corretamente 1`] = `
       </span>
     </p>
   </footer>
-</DocumentFragment>
+</div>
 `;
