@@ -8,12 +8,6 @@ jest.mock("../../components/Card", () => ({
   default: ({ pokemon }) => <div>{pokemon.name}</div>,
 }));
 
-jest.mock("next/image", () => ({
-  __esModule: true,
-  default: (props) => {
-    return <img {...props} />;
-  },
-}));
 
 describe("containers/Home", () => {
   it("deve renderizar o titulo e os cards dos pokemons", () => {

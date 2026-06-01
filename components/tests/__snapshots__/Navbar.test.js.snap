@@ -17,16 +17,16 @@ exports[`Navbar deve renderizar os links Home e Sobre 1`] = `
     <ul>
       <li>
         <a
-          href="/about"
+          href="/"
         >
-          Sobre
+          Home
         </a>
       </li>
       <li>
         <a
-          href="/"
+          href="/about"
         >
-          Home
+          Sobre
         </a>
       </li>
     </ul>
