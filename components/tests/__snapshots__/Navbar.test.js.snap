@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar deve renderizar os links Home e Sobre 1`] = `
+<div>
+  <nav>
+    <div>
+      <img
+        alt="PokeNext"
+        height="30"
+        src="/images/pokeball.png"
+        width="30"
+      />
+      <h1>
+        PokeNext
+      </h1>
+    </div>
+    <ul>
+      <li>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+        >
+          Sobre
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

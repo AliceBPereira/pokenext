@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/App deve renderizar a pagina dentro do Layout 1`] = `
+<div>
+  <main>
+    <p>
+      Conteudo
+    </p>
+  </main>
+</div>
+`;

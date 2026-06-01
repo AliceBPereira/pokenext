@@ -1,0 +1,26 @@
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
+import Pokemon from "../Pokemon";
+
+describe("containers/Pokemon", () => {
+  it("deve renderizar os dados do pokemon", () => {
+    const { container } = render(
+      <Pokemon
+        pokemon={{
+          id: 25,
+          name: "pikachu",
+          types: [{ type: { name: "electric" } }],
+          height: 4,
+          weight: 60,
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByRole("heading", { name: "pikachu" }),
+    ).toBeInTheDocument();
+    expect(screen.getByText("#25")).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+});

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer deve renderizar corretamente 1`] = `
+<div>
+  <footer>
+    <p>
+      <span>
+        PokeNext
+      </span>
+    </p>
+  </footer>
+</div>
+`;

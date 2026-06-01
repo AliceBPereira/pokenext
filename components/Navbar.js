@@ -1,8 +1,6 @@
-import Link from 'next/link'
-
-import styles from '../styles/Navbar.module.css'
-
-import Image from 'next/image'
+import Link from "next/link";
+import styles from "../styles/Navbar.module.css";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -29,5 +27,5 @@ export default function Navbar() {
         </li>
       </ul>
     </nav>
-  )
+  );
 }
